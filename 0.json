@@ -1,0 +1,9 @@
+{
+  "description": "A blue whale eats a shrimp and a megalodon eats the blue whale.", 
+  "external_url": "https://openseacreatures.io/3", 
+  "image": "https://github.com/Coding4Kids2022/ATAM-4/blob/main/0.png?raw=true", 
+  "name": "The Shrimpi",
+  "attributes": [ 
+        {"trait_type": "Gesicht", "value" }
+  ], 
+}
