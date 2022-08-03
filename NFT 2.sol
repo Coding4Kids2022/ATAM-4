@@ -3,7 +3,7 @@ pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
-import "@openzeppelin/contracts/untils/Strings.sol";
+import "@openzeppelin/contracts/utils/Strings.sol";
 
 contract NFT is ERC721 {
     using Counters for Counters.Counter;
@@ -24,6 +24,6 @@ contract NFT is ERC721 {
     }
     
      function tokenURI(uint256 tokenID) public view override returns (string memory) {
-         return string(abi.encodePacked(url, Strings.toStrings(tokenID)));
+         return string(abi.encodePacked(url, Strings.toString(tokenID),".json"));
      }
 }
