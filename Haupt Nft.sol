@@ -38,7 +38,7 @@ contract NFT is ERC721 {
      }
 
     
-        function withdraw()public{
+        function withdraw()public onlyOwner{
      
         payable (msg.sender).transfer (address(this).balance);
         
