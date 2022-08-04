@@ -10,6 +10,10 @@ contract NFT is ERC721 {
 
     Counters.Counter private currentTokenId;
     string public url;
+    
+    
+    // Creating a mapping
+    mapping (address => uint) result;
 
     
     address public owner;
@@ -24,6 +28,9 @@ contract NFT is ERC721 {
         currentTokenId.increment();
         uint256 newItemId = currentTokenId.current();
         _safeMint(msg.sender, newItemId);
+        require(result[msg.sender]<2);
+       result [msg.sender] += 1 ;
+        
     }
     
         function tokenURI(uint256 tokenID) public view override returns (string memory) {
